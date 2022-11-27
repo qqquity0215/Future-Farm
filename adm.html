@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style>
+            body {
+                background-color: rgb(37, 38, 39)
+            }
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    green: '#08F9A9',
+                    orange: '#F45E0C',    
+                    blue: '#457FFC',   
+                    grey:'#B4B4B5' ,
+                    yellow:'#FFE800',
+                  }
+                }
+              }
+            }
+          </script>
+
+
+    </head>
+<body>
+  
+    <body class="h-screen w-screen relative" style="font-family:gotham" >
+        <canvas id="renderCanvas" class="absolute z-0 w-screen h-screen left-0 top-0 outline-none"
+           ></canvas>
+
+           <!-- 左边资料 -->
+        <div class="tableBox absolute  w-64 m-10 font-bold">
+            <div class="flex justify-between p-1">
+                <p class="text-grey">Date</p>
+                    <p class="P-1 text-green">Sep 9th, 2022</p>
+            </div>
+    
+            <div class="flex justify-between p-1">
+                <p class="text-grey">Temperature</p>
+                    <p class="P-1 text-green">25℃</p>
+            </div>
+    
+            <div class="flex justify-between p-1">
+                <p class="text-grey">Humidity</p>
+                    <p class="P-1 text-green">45%</p>
+            </div>
+            <div class="flex justify-between p-1">
+                <p class="text-grey ">AQI</p>
+                    <p class="P-1 font-bold text-green">Normal</p>
+            </div>
+    
+            <div class="mt-6 text-teal-50">
+                <h1 class="p-1 text-green" style="font-size: 12px">METHANE CHANGE IN 6-HOUR</h1>
+                <img src="./img/chat01.svg" class="w-full mt-2" alt="">
+            </div>
+    
+            <div class="mt-6 text-teal-50">
+                <h1 class="p-1 text-green" style="font-size: 12px">7-DAY FORECAST</h1>
+                <img src="./img/chat02.svg" class="w-full mt-2" alt="">
+            </div>
+        </div>
+       
+
+        </div>
+        
+
+        <!-- 右边甲烷条 -->
+        <div class="absolute   right-10 top-10 w-[700px]">
+            <h1 class="text-orange text-right font-bold text-[14px]"> METHANE EMISSION - ENVIRONMENT</h1>
+            <div class="flex justify-end">
+                <div class=" mt-2 absolute translate-x-2 bg-orange bg-opacity-25 w-full h-6 rounded-3xl relative">
+                <div class="bg-orange h-full w-[380px] rounded-3xl absolute right-0 mypacity"></div>
+                </div>
+                <img class="w-2 absolute right left-10 -translate-y-2" relative src="./img/arrow.svg">
+            </div>
+    
+            <div class="mt-2 text-orange text-right text-[8px]">
+                <p class="my-text">Max 250L</p>
+                <p class="my-text">Attention(80%) = 200L</p>
+                <p class="my-text">Alarm Reminding Reach to 225L</p>
+                <div class="mt-6"></div>
+            </div>
+
+            <div class="mt-[40px] translate-x-[-500px]">
+            <img id="img1" onclick="this.hidden = true; document.getElementById('img2').hidden = false" 
+            src="/img/1fb.svg" style="height: 680px;">
+            <img id="img2" hidden=true onclick="this.hidden = true; document.getElementById('img3').hidden = false" 
+            src="/img/2f.svg" style="height: 680px;">
+            <img id="img3" hidden=true onclick="this.hidden = true; document.getElementById('img1').hidden = false" 
+            src="/img/3f.svg" style="height: 680px;">
+            
+        </div>
+
+        <div class="menu fixed left-[80px] bottom-[70px]">
+            <a href="home.html">
+                <div class="toggle" style="width:40px">
+                    <img src="./img/home.svg">
+            </div>
+
+           
+            
+</body>
+
+</html>
